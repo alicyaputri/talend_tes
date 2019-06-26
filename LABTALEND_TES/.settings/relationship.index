@@ -5,6 +5,10 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_4LccEJfMEemeEbcw0v1utw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
@@ -44,5 +48,9 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
+  }, {
+    "id" : "_4LccEJfMEemeEbcw0v1utw - metadata",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 } ]
