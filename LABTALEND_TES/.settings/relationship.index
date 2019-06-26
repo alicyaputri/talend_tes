@@ -5,10 +5,6 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_k71tQJfEEemeEbcw0v1utw",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
