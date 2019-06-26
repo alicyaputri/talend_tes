@@ -64,10 +64,6 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_EXb6AJfcEemeEbcw0v1utw",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
@@ -109,10 +105,6 @@
     "type" : "routine"
   }, {
     "id" : "_4LccEJfMEemeEbcw0v1utw - metadata",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_EXb6AJfcEemeEbcw0v1utw - metadata",
     "version" : "Latest",
     "type" : "schema"
   } ]
