@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_RIzZ4Ze_EemhgIZFscBZBw" label="labtalend_tes" description="" language="java" technicalLabel="LABTALEND_TES" creationDate="2019-06-26T09:56:31.574+0700" author="_RIzZ4pe_EemhgIZFscBZBw" productVersion="Talend Big Data Platform-7.1.1.20181026_1147" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/alicyaputri/talend_tes&quot;,&quot;login&quot;:&quot;alicyaputri&quot;,&quot;passwd&quot;:&quot;8bjFAE4iYG23Qvvu/aaJGtchqZW21raM&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DI">
+    <migrationTask xmi:id="_RQ0GYJe_EemhgIZFscBZBw" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_RIzZ4pe_EemhgIZFscBZBw" login="alicya@jukesolutions.com" firstName="Alicya" lastName="Putri" type="DQ" additionnalData="{}"/>
+</xmi:XMI>
