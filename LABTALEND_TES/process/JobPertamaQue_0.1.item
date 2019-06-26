@@ -570,21 +570,15 @@
       <column defaultValue="" key="false" length="255" name="line" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tExtractDelimitedFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractDelimitedFields_1"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="FIELD" value="Column1"/>
-    <elementParameter field="CHECK" name="IGNORE_SOURCE_NULL" value="true"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;OA&quot;"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="TRIM" value="false"/>
+  <node componentName="tExtractRegexFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractRegexFields_1"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="FIELD" value="Column0"/>
+    <elementParameter field="LABEL" name="REGEX_HELP" value="The default regex will match &quot;[Monday] meeting with John [priority: high] [place: office]&quot;&#10;      and &quot;[Friday] diner with kids [priority: highest] [place: home]&quot;&#10;&#9;  "/>
+    <elementParameter field="MEMO" name="REGEX" value="&quot;^\\[(\\w+)\\]([^\\[]+)\\[priority:\\s*(\\w+)\\]\\s*\\[place:\\s*([^\\]]+)\\]&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tExtractDelimitedFields_1">
+    <metadata connector="FLOW" label="metadata" name="tExtractRegexFields_1">
       <column comment="" key="false" length="12" name="Column0" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="14" name="Column1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="Column2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -957,11 +951,11 @@
       <column comment="" key="false" length="5" name="Column68" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tExtractDelimitedFields_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tExtractRegexFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractDelimitedFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractDelimitedFields_1" target="tLogRow_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tExtractRegexFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractRegexFields_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
@@ -970,13 +964,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bfa6524a-cc82-4b6b-8444-06346bf0bace"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JucULAOEQxVapgoIGi0K3+FJHAE64B81OjkQSr6ze5DULIU+5ubZwBnDUYuQ5icNL4e83ruG1JLT
-iR62DG6Wpw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_944a8d33-7258-4cdc-a143-e2f4ef3d74fa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0fn9NfvlhkXyXEIljg/jZFOVQsJbZcZOKVq7ESoaY9gqelloVdYX2oo4htgfbBxI6TtTaSL/4SVl
-FuxBxxENZA==</DigestValue></Reference></SignedInfo><SignatureValue>sOGv3O3wwmuvPEKHdnz0qiKaNA7QEbw1PeZBgDTnC0prXDfqirlsmNNtRVS1sMdqm6iB4RIwjBjM
-88yLgblQ1Lmt9bptRSNeV1+bGSxEZOXtbNKiCSiApu0epIxY+QNRxl+DimXmuUSFdSfO6Y3X4ftx
-S+HKPLr53h6GocXXD1btPuefYW3As/Oxp14O0UiQqplD3K0mC8UM6g2Plk9qLKKXtfiXH/iYEZkC
-O09FpZatNToBIap1Yvkd0sb6ZtGJDB9NPXcpUU/dJnWITtMOY3R1T7eWkJMCETJEQXbEfjZDEpG4
-8SwLW3IjcHfnYmFOUY98525nMP9yBz9QwtNYeA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cdf63670-f959-4d3e-9631-d346e65aa4ac"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SFEHyaz1j9dYbhFKEOV+zeC/gfO57Te1Rqaor/D99NuuROrrCKuh6qDBFsWrZO07f4SGs82kOHZj
+PJpkNhp12w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8e3fc0fa-15cf-456a-93c8-01dd093ba66d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bb+i94aIn6WFXAqZYtcHcoHMLCEzb9jQfu+EBeVPXKnZKb/4JaI6YAG4a5A2ZTh4e2GpE8aKGsA1
+Uot8QBylCA==</DigestValue></Reference></SignedInfo><SignatureValue>irRliBQfqiWfOa/drtnEFP2GFsi07Y9RxvmzIm2LWutWf6+cJgPJ9D0HsEiL9ym0ac1zswHLAN2m
+HCXDsuIGF9pmdDpNjlPhu9c2MX7kPK7DcTl/kf6zBlbOE3uyD+ok/nQJAr+KStpLmRlzXKLQ6C34
+5ZYLQUZY7aPYpoGeUDuFvhFJvDqToQhazOQQ9e2NDUhqhtb3jjlqQFqk4NQu7/r1hlm/9HWlvDyQ
+F0Qi6Q7qoy2aKcgTA5r+gkGlngjkYDTuOqRlRX0DCsUNHyG1DO+fKFSdvVJ6f5XD21TnkpVY8sIN
+LfQGV4MnT4YGtjS76IpeYQkfbU5jzULIXifiwA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1000,4 +994,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_944a8d33-7258-4cdc-a143-e2f4ef3d74fa" Target="#_bfa6524a-cc82-4b6b-8444-06346bf0bace"><Timestamp>2019-06-26 06:11:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8e3fc0fa-15cf-456a-93c8-01dd093ba66d" Target="#_cdf63670-f959-4d3e-9631-d346e65aa4ac"><Timestamp>2019-06-26 06:30:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
