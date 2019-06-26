@@ -944,6 +944,8 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="true"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -1170,8 +1172,149 @@
       <column comment="" key="false" length="5" name="Column68" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_YdMMsJfvEemeEbcw0v1utw-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" key="false" length="30" name="DIA_IMEI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="DIA_NCC_HOST" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="DIA_OCGI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="28" name="DIA_ORIG_DIGIT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CAU" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="out1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row2.Column40.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="DIA_IMEI" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Column41.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="DIA_NCC_HOST" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Column42.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="DIA_OCGI" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Column43.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="DIA_ORIG_DIGIT" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.Column35.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="CAU" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="Column0" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column2" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column3" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column4" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column5" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column6" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column7" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column8" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column9" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column10" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column11" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column12" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column13" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column14" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column15" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column16" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column17" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column18" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column19" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column20" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column21" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column22" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column23" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column24" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column25" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column26" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column27" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column28" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column29" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column30" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column31" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column32" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column33" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column34" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column35" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column36" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column37" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column38" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column39" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column40" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column41" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column42" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column43" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column44" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column45" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column46" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column47" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column48" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column49" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column50" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column51" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column52" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column53" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column54" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column55" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column56" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column57" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column58" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column59" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column60" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column61" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column62" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column63" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column64" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column65" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column66" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column67" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Column68" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DIA_IMEI"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DIA_NCC_HOST"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DIA_OCGI"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DIA_ORIG_DIGIT"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CAU"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_3">
+      <column comment="" key="false" length="30" name="DIA_IMEI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="DIA_NCC_HOST" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="27" name="DIA_OCGI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="28" name="DIA_ORIG_DIGIT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CAU" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -1398,110 +1541,6 @@
       <column comment="" key="false" length="5" name="Column68" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_YdMMsJfvEemeEbcw0v1utw-tMap_2-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata name="out1">
-      <column comment="" key="false" length="30" name="DIA_IMEI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="DIA_NCC_HOST" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="27" name="DIA_OCGI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="28" name="DIA_ORIG_DIGIT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CAU" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="out1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row2.Column40.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="DIA_IMEI" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row2.Column41.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="DIA_NCC_HOST" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row2.Column42.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="DIA_OCGI" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row2.Column43.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="DIA_ORIG_DIGIT" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row2.Column35.replaceAll(&quot;[A-Z+_=]&quot;, &quot;&quot;) " name="CAU" nullable="true" type="id_String"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="Column0" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column1" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column2" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column3" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column4" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column5" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column6" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column7" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column8" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column9" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column10" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column11" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column12" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column13" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column14" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column15" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column16" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column17" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column18" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column19" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column20" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column21" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column22" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column23" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column24" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column25" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column26" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column27" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column28" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column29" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column30" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column31" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column32" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column33" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column34" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column35" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column36" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column37" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column38" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column39" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column40" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column41" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column42" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column43" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column44" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column45" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column46" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column47" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column48" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column49" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column50" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column51" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column52" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column53" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column54" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column55" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column56" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column57" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column58" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column59" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column60" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column61" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column62" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column63" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column64" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column65" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column66" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column67" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Column68" nullable="true" type="id_String"/>
-      </inputTables>
-    </nodeData>
-  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -1512,24 +1551,34 @@
   </connection>
   <connection connectorName="FLOW" label="Slah" lineStyle="0" metaname="Slah" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Slah"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8e117d55-3173-4d97-aed7-2a5a0c42c44c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>t5RDFAZ3n4NxNp+apxWf4GBLPhkV1+jfTBmfYvmLPdNBi8CNWM8oj5raW1ETUTQ+Su1VJHIsmPgX
-/MimTr8aPw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5a889d23-3e5e-45e8-84b3-aaf2e9cc5a13"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Fapp0LxqnlDHhpyYimyY354h05zEdYTQm7JCGgmi4MXovVpu0qCWofZ2RQwJIDbpySm8rFjvbJLE
-mfFU+K1Eqw==</DigestValue></Reference></SignedInfo><SignatureValue>YO1nxALx8TTggdA9Tvq+9Vqz2jO0ZqaH3EtxRxm1458VyZwOKDa7AAwKkYUB5QyJLJ0/Jgi0onEZ
-GBiVCPoPBUfX6dXwkwN0zylrBozV2DoDkI3nKN+/vLC5Lxkv1Zk8V1F3kib+5gXWCNCaJmyxRox5
-3Bc5sfwJ9D6T5S0swghorplqT5IOXJo9HFyPqfBuNQkxZFcYZojBWj1UEDKvS3sykjWQTfMOj8zp
-rvhi+3Ry3aL04OPzljLbyMGYGZ/Dh4dFCURhC/wiSISaJ/MtXIQRxbmnRCzoKWtkkrTvURFT1MU1
-afojplNE0OVpcVMU2hfBUKPHHl9KDiojAv/YtQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_177cba8a-e497-4ae2-adf9-e4459f4efc92"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zoZLZ1iiIsHk4jKw0b+QVrAccKs0oA//+f2G9C2p1+lqd2ZZR/INsW3Uclu37vo4j0OwSMUxALn4
+z/OGhu6q5w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5ba807a8-0212-43f2-9c66-3d48467ab802"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+A8wMgCoRhcfVeJ7hQ73vSwFCnyEdibU5FPruwpGY8DiARXgOG3css04r2HdTx+Iq8xrRoOzQbPv
+Zd4wgT6Mdw==</DigestValue></Reference></SignedInfo><SignatureValue>g0i9TigRZ8rR3FCAPfOBhDAUMElpNOczhRVQUuDt9BwbTR2rNiyPxwkoLTm4/eoqg6DGrpR5bLrn
+xn8WC2ebD8mfBvB7k95cQEVenCkcF+GC1IpCB8fenYnrplQg/YAKy1lqyiy3dGTR7EmFhvjx+2Kg
+MIL5/8RRNodHeATp1jvgfEMRQ4wfWWa/G2bTYlK1s7VjSzMSw33XMWhV9HWWj1FdOxJDNys8ZuL5
+e6T7auHZByyaadPFSRMu9JkNXs02Qbcp+5ToG3SjWUFeyg/PDVPpkvWVeLp3zEf0mS9bk3AANWnI
+cFEk6Mwg+QI/M15ZGOSw5nILlcLpHcdOlt4RoA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1553,4 +1602,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5a889d23-3e5e-45e8-84b3-aaf2e9cc5a13" Target="#_8e117d55-3173-4d97-aed7-2a5a0c42c44c"><Timestamp>2019-06-26 10:03:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5ba807a8-0212-43f2-9c66-3d48467ab802" Target="#_177cba8a-e497-4ae2-adf9-e4459f4efc92"><Timestamp>2019-06-26 10:04:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
