@@ -260,9 +260,9 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_RgxZQJ02EemVvohjAS8M0A",
+    "id" : "_qJZKQJ01EemVvohjAS8M0A",
     "version" : "Latest",
-    "type" : "job"
+    "type" : "property"
   }, {
     "id" : "DataOperation",
     "version" : "Latest",
